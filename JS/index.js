@@ -8,7 +8,8 @@ window.onload = () => {
   const ctx = canvas.getContext("2d");
   //referenciamos el elemento html, le asignamos un contexto y lo asignamos a la constante ctx(contexto por convencion).
 
-  let gameInterval = null; //
+  let gameInterval = null; 
+  let timeIsUp = false;
 
   let lunarBackgroundImg = new Image();
   lunarBackgroundImg.src = "styles/resources/280531.jpg";
@@ -251,7 +252,7 @@ window.onload = () => {
     }
   }
   var myMusicSlap = new Audio("styles/resources/slap-effects.mp3");
-  //var MyMusicTrombon = new Audio("/styles/resources/Sad-Trombone-A1-www.fesliyanstudios.com.mp3")
+  var MyMusicTrombon = new Audio("/styles/resources/Sad-Trombone-A1-www.fesliyanstudios.com.mp3")
 
   function detectCollision(earthling, object) {
     let collision =
@@ -306,7 +307,7 @@ window.onload = () => {
     }, 250);
   };
   
-    let timeRemaining = 90
+    let timeRemaining = 60
     let timeNode = document.getElementById("time-counter");
     
 function timeCounter() {
@@ -317,7 +318,7 @@ function timeCounter() {
         timeNode.innerHTML = String(timeRemaining);
         return timeRemaining; 
         }else{
-            //youWinImg.draw()
+            timeIsUp = true
             clearInterval()
         }          
     }, 1000);   
@@ -325,14 +326,24 @@ function timeCounter() {
 
  
   var myMusic = new Audio("styles/resources/Django-Reinhardt-Chicago.mp3");
-  //|| timeRemaining == 0
+  
 function startGame() {
-    if (gameOver) {
+    if (gameOver || timeIsUp === true) {
+      
+      myMusic.paused;
+      setInterval(() => {
+        youWin.draw()
+        MyMusicTrombon.play()
+      }, 1000);
+      
+      setInterval(() => {
         cancelAnimationFrame(gameInterval); 
-       // youWinImg.draw()
-        window.location.reload()  
-      alert("GAME OVER, YOU WIN!!!");  
+        window.location.reload() 
+      }, 5000);
+         
+      //alert("GAME OVER, YOU WIN!!!");  
     }else{
+      myMusic.play();
       gameInterval = requestAnimationFrame(startGame);
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -347,7 +358,7 @@ function startGame() {
       detectCollision(earthling, object);
       detectAppleCollision(earthling, apple);
     });
-    myMusic.play();
+    
 }
 
   window.addEventListener("keydown", moveEarthling);
