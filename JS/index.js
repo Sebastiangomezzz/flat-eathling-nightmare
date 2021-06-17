@@ -1,15 +1,14 @@
-window.onload = () => {
+window.onload = () => {//cuando cargue la pagina ...
   
   let gameOver = false;// esta afirmacion se comunica con startGame
-  //cuando cargue la pagina ...
-
+  let gameInterval = null; 
+  let timeIsUp = false;
 
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   //referenciamos el elemento html, le asignamos un contexto y lo asignamos a la constante ctx(contexto por convencion).
 
-  let gameInterval = null; 
-  let timeIsUp = false;
+  
 
   let lunarBackgroundImg = new Image();
   lunarBackgroundImg.src = "styles/resources/280531.jpg";
@@ -27,7 +26,7 @@ window.onload = () => {
   };
 
   let youWinImg = new Image();
-  youWinImg.src = "styles/resources/youwin.jpeg"
+  youWinImg.src = "styles/resources/comic-speech-bubble-expression-text-win-vector-bright-dyna-comic-speech-bubble-expression-text-win-vector-bright-dynamic-109852400.jpg"
 
   const youWin = {
     image: youWinImg,
