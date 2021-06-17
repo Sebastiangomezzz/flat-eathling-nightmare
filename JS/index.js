@@ -26,7 +26,7 @@ window.onload = () => {//cuando cargue la pagina ...
   };
 
   let youWinImg = new Image();
-  youWinImg.src = "styles/resources/comic-speech-bubble-expression-text-win-vector-bright-dyna-comic-speech-bubble-expression-text-win-vector-bright-dynamic-109852400.jpg"
+  youWinImg.src = "styles/resources/you-win.jpg"
 
   const youWin = {
     image: youWinImg,
@@ -251,7 +251,7 @@ window.onload = () => {//cuando cargue la pagina ...
     }
   }
   var myMusicSlap = new Audio("styles/resources/slap-effects.mp3");
-  var MyMusicTrombon = new Audio("/styles/resources/Sad-Trombone-A1-www.fesliyanstudios.com.mp3")
+  var MyMusicTrombon = new Audio("styles/resources/trombon.mp3")
 
   function detectCollision(earthling, object) {
     let collision =
