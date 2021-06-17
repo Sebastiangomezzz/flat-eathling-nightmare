@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Nightmare";
+    src: url("/styles/resources/Creepster-Regular.ttf");
+}
+
+.game-board{
+    position: relative;
+    height: 1358px;
+    padding-bottom: 0;
+    margin: 0;
+}
+.back-image{
+    width: 2900px;
+    height: 1358px;
+    padding-bottom: 0;
+    margin: 0;
+}
+canvas {
+    background-size: 150%;
+    background-position: 0 100%;
+    padding: 0;
+    margin: auto;
+    margin-top: 215px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+#score-counter{
+    position: absolute;
+    top: 0;
+    right: 50;
+    background-color: rgb(117, 139, 64);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    margin-left: 2600px;
+    margin-top: 220px;
+    padding: 10px 10px 10px 40px;
+    border-radius: 0 15px 15px 0
+}
+.score-counter{
+    position: absolute;
+    background-color: rgb(117, 139, 64);
+    color: rgb(188, 207, 243);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 60px;
+    margin-left: 2465px;
+    margin-top: 220px;
+    padding: 10px 5px 10px 10px; 
+}
+#time-counter{
+    position: absolute;
+    background-color: rgb(117, 139, 64);
+    color: rgb(184, 41, 23);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 80px;
+    margin-left: 175px;
+    margin-top: 220px;
+    padding: 10px 40px 10px 40px;
+    border-radius:  15px 0 0 15px 
+
+}
+#start-button{
+    background-color: rgb(94, 163, 54);
+    position: absolute;
+    margin-left: 2100px;
+    margin-top: 1125px;
+    padding: 25px 15px;
+    font-size: 65px;
+    color: rgb(113, 46, 139);
+    border-radius: 15px;
+    border-style: double;
+    border: solid 5px sienna;
+    box-shadow: -12px -12px 25px #848688 inset;
+    
+}
+.Title{
+    position: absolute;  
+    font-family: Nightmare;
+    color: rgb(233, 81, 11);
+    font-size: 200px;
+    font-style: oblique;
+    margin-top: 20px;
+    margin-left: 380px;
+  
+}
