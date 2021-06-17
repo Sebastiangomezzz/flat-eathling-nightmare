@@ -234,7 +234,7 @@ window.onload = () => {//cuando cargue la pagina ...
   let objectArr = [];
   let objects = [];
   var myMusicApple = new Audio("styles/resources/mixkit-retro-game-notification-212.wav");
-
+  myMusicApple.volume = 0.7
   function detectAppleCollision(earthling, apple) {
     let collision =
       earthling.x < apple.x + apple.width &&
@@ -251,7 +251,9 @@ window.onload = () => {//cuando cargue la pagina ...
     }
   }
   var myMusicSlap = new Audio("styles/resources/slap-effects.mp3");
+  myMusicSlap.volume = 0.6;
   var MyMusicTrombon = new Audio("styles/resources/trombon.mp3")
+  MyMusicTrombon.volume = 0.6;
 
   function detectCollision(earthling, object) {
     let collision =
@@ -282,7 +284,7 @@ window.onload = () => {//cuando cargue la pagina ...
     }
   }
   var MyMusicYuhu = new Audio("styles/resources/mario-bros-woo-hoo.mp3");
-
+  MyMusicYuhu.volume = 0.6;
 
   document.getElementById("start-button").onclick = () => {
     startGame();
@@ -325,7 +327,7 @@ function timeCounter() {
 
  
   var myMusic = new Audio("styles/resources/Django-Reinhardt-Chicago.mp3");
-  
+  myMusic.volume = 0.5;
 function startGame() {
     if (gameOver || timeIsUp === true) {
       
