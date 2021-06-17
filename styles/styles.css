@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Nightmare";
-    src: url("/styles/resources/Creepster-Regular.ttf");
+    src: url("../styles/resources/Creepster-Regular.ttf");
 }
 
 .game-board{
